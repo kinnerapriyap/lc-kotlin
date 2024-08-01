@@ -9,3 +9,23 @@ fun lengthOfLongestSubstring(s: String): Int {
     }
     return max
 }
+
+fun lengthOfLongestSubstring2(s: String): Int {
+    val listOfCharacters = mutableListOf<Char>()
+    var max = 0
+    var start = 0
+    var end = 0
+
+    while (end < s.length) {
+        if (listOfCharacters.contains(s[end])) {
+            listOfCharacters.remove(s[start])
+            start++
+        } else {
+            listOfCharacters.add(s[end])
+            end++
+            max = maxOf(max, listOfCharacters.size)
+        }
+    }
+
+    return max
+}

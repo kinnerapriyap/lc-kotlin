@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/3sum/submissions/1341593014/
 // Brute Force - doesn't finish
 fun threeSum(nums: IntArray): List<List<Int>> {
     if (nums.size < 3) return emptyList()

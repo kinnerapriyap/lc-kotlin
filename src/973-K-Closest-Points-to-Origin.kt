@@ -1,5 +1,7 @@
 import java.util.*
 
+// https://leetcode.com/problems/k-closest-points-to-origin/description/
+
 fun kClosest(points: Array<IntArray>, k: Int): Array<IntArray> {
     points.sortBy { it[0] * it[0] + it[1] * it[1] }
     return points.take(k).toTypedArray()
